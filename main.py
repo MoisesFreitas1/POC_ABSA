@@ -1,17 +1,9 @@
-from src.scraper import PlayStoreScraper
-from src.absa import AspectClassifier, SentimentAnalyzer
+from src.pipeline import ABSAPipeline
 
-scraper = PlayStoreScraper()
-classifier = AspectClassifier()
-analyzer = SentimentAnalyzer()
+pipeline = ABSAPipeline()
+results = pipeline.run()
 
-reviews = scraper.fetch_reviews()
-
-for review in reviews[:50]:
-    text = review["text"]
-    aspect = classifier.classify(text)
-    sentiment = analyzer.analyze(text)
-    print(f"Texto     : {text}")
-    print(f"Aspecto   : {aspect}")
-    print(f"Sentimento: {sentiment['sentimento']} ({sentiment['confiança_modelo']})")
+print(f"Total processados: {len(results)}")
+for r in results[:3]:
+    print(r)
     print("-" * 60)
