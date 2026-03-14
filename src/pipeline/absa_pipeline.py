@@ -25,6 +25,4 @@ class ABSAPipeline:
             "aspecto_detectado": self._classifier.classify(text),
             "sentimento": sentiment["sentimento"],
             "confiança_modelo": sentiment["confiança_modelo"],
-            "avaliação": review["rating"],
-            "data": review["date"],
         }

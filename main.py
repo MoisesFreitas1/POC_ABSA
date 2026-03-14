@@ -1,9 +1,8 @@
 from src.pipeline import ABSAPipeline
+from src.report import ReportGenerator
 
 pipeline = ABSAPipeline()
 results = pipeline.run()
 
-print(f"Total processados: {len(results)}")
-for r in results[:3]:
-    print(r)
-    print("-" * 60)
+report = ReportGenerator()
+report.generate(results)
