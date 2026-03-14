@@ -11,8 +11,8 @@ SCRAPER_COUNTRY = "br"
 SCRAPER_COUNT = 200
 
 ASPECTS = {
-    "Usabilidade": ["interface", "fácil", "design", "navegação", "intuitivo", "usability", "easy", "layout"],
-    "Conteúdo Didático": ["aula", "conteúdo", "material", "explicação", "didático", "lesson", "content", "course"],
-    "Performance Técnica": ["lento", "travou", "crash", "bug", "erro", "carregamento", "slow", "freeze", "load"],
-    "Engajamento": ["motivação", "gamificação", "recompensa", "viciante", "divertido", "fun", "streak", "reward"],
+    "Usabilidade": ["interface", "fácil", "difícil", "design", "navegação", "intuitivo", "layout", "menu", "botão", "tela"],
+    "Conteúdo Didático": ["aula", "conteúdo", "material", "explicação", "didático", "lição", "lições", "superficial", "fluência", "aprender", "aprendizado", "exercício"],
+    "Performance Técnica": ["lento", "travou", "travando", "crash", "bug", "erro", "carregamento", "instável", "fecha", "reinicia", "offline"],
+    "Engajamento": ["motivação", "gamificação", "recompensa", "viciante", "divertido", "streak", "entediante", "empolgante", "desafio", "pontos"],
 }
