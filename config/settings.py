@@ -8,7 +8,7 @@ DATA_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 TARGET_APP_ID = "com.duolingo"
 SCRAPER_LANG = "pt"
 SCRAPER_COUNTRY = "br"
-SCRAPER_COUNT = 200
+SCRAPER_COUNT = 1000
 MIN_REVIEW_LENGTH = 20
 
 ASPECTS = [
