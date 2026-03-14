@@ -11,7 +11,7 @@ class PlayStoreScraper:
             self.app_id,
             lang=SCRAPER_LANG,
             country=SCRAPER_COUNTRY,
-            sort=Sort.MOST_RELEVANT,
+            sort=Sort.NEWEST,
             count=SCRAPER_COUNT,
         )
         return [self._parse(r) for r in result]
