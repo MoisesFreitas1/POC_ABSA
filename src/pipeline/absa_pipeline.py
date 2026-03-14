@@ -1,3 +1,4 @@
+from tqdm import tqdm
 from config.settings import MIN_REVIEW_LENGTH
 from src.scraper import PlayStoreScraper
 from src.absa import AspectClassifier, SentimentAnalyzer
@@ -11,7 +12,8 @@ class ABSAPipeline:
 
     def run(self) -> list[dict]:
         reviews = self._scraper.fetch_reviews()
-        return [self._process(r) for r in reviews if self._is_valid(r)]
+        valid = [r for r in reviews if self._is_valid(r)]
+        return [self._process(r) for r in tqdm(valid, desc="Processing reviews")]
 
     def _is_valid(self, review: dict) -> bool:
         text = review.get("text") or ""
